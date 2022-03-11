@@ -2,14 +2,86 @@
 <html lang = "en">
     <head>
         <title>This is my site</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            nav{
+                text-align: right;
+            }
+
+            .nav-bar{
+                display: inline-block;
+                margin-left: 5px;
+            }
+            .main-ele{
+                display: block;
+                padding: 10px;
+            }
+            .ele{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                text-decoration:underline;
+            }
+            input {
+                border: 0px;
+                outline: none;
+            }
+            #main-stuf{
+                padding: 100px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .input{
+                display: inline-block;
+            }
+            input{
+                height: 35px;
+                font-size: 17px;
+                width: 540px;
+            }
+            #input-icon{
+                padding: 10px;
+            }
+            #box-around-input{
+                border: 1px solid black;
+                border-radius: 20px;
+                width: 600px;
+                height: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
     <body>
-
-        <h1>Just testing</h1>
-        <form action="post">
-            <input type="text">
-        </br>
-            <input type="password">
-        </form>
+        <header>
+            <nav>
+                <ul>
+                    <li class="nav-bar"> <a href="Image Search">Image Search</a></li>
+                    <li class="nav-bar"> <a href="Advanced Search">Advanced Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="main-stuf">
+            <ul>
+                <li class="main-ele"><img class="ele" src="google.png" alt="Google" height="92"></li>
+                <li class="main-ele">
+                    <form action="http://google.com" method="get">
+                    <div id="box-around-input">
+                        <div id="input-icon"  class="input"><i class="fa fa-user fa-lg"></i></div>
+                        <div id="input-block"class="input"><input type="text"></div>
+                    </div>
+                    </form>
+                </li>
+            </ul>
+            </div>
+        </main>
     </body> 
 </html>

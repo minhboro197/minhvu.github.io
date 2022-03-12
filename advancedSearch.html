@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advanced Search</title>
+    </head>
+    <style>
+        img{
+            width: 80px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        #advanced-search{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 40px
+        }
+        #find-page{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+            padding-bottom: 10px;
+        }
+        .long-field{
+            box-sizing: border-box;
+            width: 40%;
+        }
+        .short-field{
+            box-sizing: border-box;
+            width: 48%;
+        }
+        #space{
+            width: 42%;
+            height: 20px;
+            box-sizing: border-box;
+        }
+        .box-label-queries{
+            width: 180px;
+        }
+        .label-queries{
+            font-size: 14px;
+        }
+        div{
+            display: inline-block;
+        }
+        .queries-description{
+            font-size: 12px;
+        }
+        .description-box{
+            padding-left: 10px;
+        }
+        .description-example{
+            font-family: monospace;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        #nlowhi-seperator{
+            width: 16px;
+            text-align: center;
+        }
+        input{
+            display: inline-block;
+        }
+        #long-field-div{
+            box-sizing: border-box;
+            width: 40%;
+        }
+    </style>
+    <body>
+        <header>
+            <img src="google.png" alt="google">
+            </br>
+            <div id="advanced-search"><label>Advanced Search</label></div>
+            <hr>
+        </header>
+        <main>
+            <form action="https://www.google.com/search" method="get">
+                <ul>
+                    <li>
+                        
+                        <label id="find-page">Find pages with...</label>
+                        <div id="space"></div>
+                        <label style ="font-weight: bold;font-size: 14px;">To do this in a search box</label>
+                    </li>
+                    <li>
+                        <div class="box-label-queries">
+                        <label class="label-queries">all these words:</label>
+                        </div>
+                        <input class="long-field" type="text" name="as_q">
+                        <div class="description-box">
+                        <label class="queries-description">type the importance words: <span class="description-example">tri-colour rat terrier</span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-label-queries">
+                        <label class="label-queries">This exact word or phrases:</label>
+                        </div>
+                        <input class="long-field" type="text" name="as_epq">
+                        <div class="description-box">
+                            <label class="queries-description">Put exact words in quotes: <span class="description-example">"rat terrier"</span></label>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="box-label-queries">
+                        <label class="label-queries">any of these words:</label>
+                        </div>
+                        <input class="long-field" type="text" name="as_oq">
+                        <div class="description-box">
+                            <label class="queries-description">Type <strong>OR</strong> between all the words you want: 
+                                <span class="description-example">miniature OR standard</span></label>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="box-label-queries">
+                        <label class="label-queries">none of these words:</label>
+                        </div>
+                        <input class="long-field" type="text" name="as_eq">
+                        <div class="description-box">
+                            <label class="queries-description">type the importance words:<span class="description-example">"-rodent, -"Jack Russell""</span></label>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="box-label-queries">
+                            <label class="label-queries">number ranging from:</label>
+                        </div>
+                        <div id="long-field-div">
+                            <input class="short-field" type="text" name="as_nlo">
+                            <div id="nlowhi-seperator"><span>to</span></div>
+                            <input class="short-field" type="text" name="as_nhi">
+                        </div>
+                        <div class="description-box">
+                            <label class="queries-description">Put two full stops between the numbers and add a unit of measurement:<span class="description-example">10..35 kg, £300..£500, 2010..2011</span></label>
+                        </div>
+                    </li>
+                </ul>
+                <div style="width: 100%;text-align: center;">
+                    <input style="background-color: #8ab4f8;border-radius: 10px; height: 30px; border: 1px solid #8ab4f8 ;" type="submit" value="Advanced Search">
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

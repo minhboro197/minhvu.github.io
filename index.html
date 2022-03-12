@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <title>This is my site</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             nav{
                 text-align: right;
@@ -57,6 +57,22 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            ul{
+                list-style-type: none;
+            }
+            #button-box{
+                text-align: center;
+                padding-top: 10px;
+            }
+            .button-ele{
+                margin-left: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-weight:bold;
+                border-radius: 5px;
+                border: 1px solid;
+                width: fit-content;
+            }
         </style>
     </head>
     <body>
@@ -70,17 +86,25 @@
         </header>
         <main>
             <div id="main-stuf">
-            <ul>
-                <li class="main-ele"><img class="ele" src="google.png" alt="Google" height="92"></li>
-                <li class="main-ele">
-                    <form action="http://google.com" method="get">
-                    <div id="box-around-input">
-                        <div id="input-icon"  class="input"><i class="fa fa-user fa-lg"></i></div>
-                        <div id="input-block"class="input"><input type="text"></div>
-                    </div>
-                    </form>
-                </li>
-            </ul>
+            <form action="http://google.com/search" method="get">
+                <ul>
+                    
+                    <li class="main-ele"><img class="ele" src="google.png" alt="Google" height="92"></li>
+                    <li class="main-ele">
+                        <div id="box-around-input">
+                            <div id="input-icon"  class="input"><i class='fa-solid fa-magnifying-glass'></i></div>
+                            <div id="input-block"class="input"><input type="text" name="q"></div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div id="button-box">
+                            <input class="button-ele" type="submit" value="Google Search">
+                            <input class="button-ele" type="submit" name="btnI" value="I'm feeling lucky">
+                        </div>
+                    </li>
+                </ul>
+            </form>
             </div>
         </main>
     </body> 
